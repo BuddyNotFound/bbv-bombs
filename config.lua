@@ -7,9 +7,8 @@ QBCore = exports['qb-core']:GetCoreObject()  -- uncomment if you use QBCore
 
 Config.Settings = {
 	Framework = 'QB', -- QB/ESX
-	Inventory = 'OX', -- QB/OX
 	Target = "OX", -- OX/QB
 	WebHook = "", -- Discord webhook 
-	Prop = "prop_explosive_c4_screen",
+	Prop = "prop_explosive_c4_screen", -- prop model name
 	ItemName = "c4_bomb"
 }
