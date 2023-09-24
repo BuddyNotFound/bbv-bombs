@@ -1,4 +1,5 @@
-![bombs_main](https://github.com/BuddyNotFound/bbv-bombs/assets/74051918/34c617cb-2332-4a30-bd35-9ea2194de930)
+![bombs_main](https://github.com/BuddyNotFound/bbv-bombs/assets/74051918/9fc78202-6120-4ad5-8fe1-ebbf6b1bbfc2)
+
 
 **BBVxWORLD Bombs** allows you to plant and defuse bomb, works with QB/ESX and it requires [ox_lib](https://github.com/overextended/ox_lib)
 It is also compatible with **OX/QB/BT** targets.
@@ -12,14 +13,16 @@ All bomb data is synchronized between players and is deleted upon server restart
 **Preview (2 players) :** - https://streamable.com/vqnn8d
 
 **Logs :** 
-![image](https://github.com/BuddyNotFound/bbv-bombs/assets/74051918/0ae9ea9c-031b-497c-b349-58c61e72a5e8)
+![image](https://github.com/BuddyNotFound/bbv-bombs/assets/74051918/e2dc8a3b-4170-4600-abff-f98d9517a491)
+
 
 
 ----
 
 The resource also come with 2 custom (animated) prop and images for the items.
-![image](https://github.com/BuddyNotFound/bbv-bombs/assets/74051918/9d90a272-5808-490a-a1e0-30f58e20d29d)
-![ezgif-1-98fdf3b581](https://github.com/BuddyNotFound/bbv-bombs/assets/74051918/ce223cd6-44ba-4715-a8f2-667df2cc4924)
+![image](https://github.com/BuddyNotFound/bbv-bombs/assets/74051918/65c8f6fa-9f14-4b8c-bfd0-ac9514fa288b)
+![ezgif-1-98fdf3b581](https://github.com/BuddyNotFound/bbv-bombs/assets/74051918/f8a95b38-7aa0-4771-97b9-dfab3a14e119)
+
 
 
 3D model used : [Sketchfab](https://sketchfab.com/3d-models/c4-explosive-617d754683114b6a8244ececbd03365e)
