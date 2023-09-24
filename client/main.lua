@@ -31,9 +31,10 @@ RegisterNetEvent('bbv-bombs:plantbomb',function()
         {type = 'input', label = 'Time To Complete', description = 'Time To Complete (10-30)', required = true, min = 1, max = 2},
         {type = 'input', label = 'Time To See', description = 'Time To See (3-10)', required = true, min = 1, max = 2},
         {type = 'input', label = 'Attempts', description = 'Attempts (1-10)', required = true, min = 1, max = 2},
+        {type = 'input', label = 'Pin', description = 'Used to disable the bomb', required = true, min = 1, max = 6},
       })
 
-    if tonumber(input[1]) < 5 or tonumber(input[1]) > 7200 then 
+    if tonumber(input[1]) < 120 or tonumber(input[1]) > 7200 then 
         Wrapper:Notify('Length must be between (120-7200)')
         return
     end
@@ -76,9 +77,11 @@ RegisterNetEvent('bbv-bombs:plantbomb',function()
         timetoLose = input[4], -- Colored Sqaures (5-20)
         timetoShow = input[5], -- Time To Complete (10-30)
         incorrectBlocks = input[6],
-        position = pos
+        position = pos,
+        pin = input[7]
     }
     Wrapper:RemoveItem(Config.Settings.ItemName,1)
+    Wrapper:Log('Planted A Bomb at : ' .. GetEntityCoords(PlayerPedId()) .. ' | ' .. data.length .. ' Seconds left.')
     TriggerServerEvent('bbv-bombs:plantbomb',data)
 end)
 
@@ -325,6 +328,30 @@ RegisterNetEvent('bbv-bombs:cut:white',function()
                 }
                 TriggerServerEvent('bbv-bombs:explode',explosion)
                     TriggerServerEvent('bbv-bombs:syncdata',v.position,nil,nil)
+            end
+        end
+    end
+end)
+
+RegisterNetEvent("bbv-bombs:pin",function()
+    mypos = GetEntityCoords(PlayerPedId())
+    for k,v in pairs(Bombs) do 
+        local dist = #(mypos - v.position)
+        if dist <= 3 then 
+            local input = exports['ox_lib']:inputDialog('Bomb Planting', {
+                {type = 'input', label = 'Pin', description = 'Used to disable the bomb', required = true, min = 1, max = 6},
+              })
+            if input[1] == Bombs[v.position].pin then 
+                Wrapper:Notify("You defused the bomb.")
+                TriggerServerEvent('bbv-bombs:defuse',v.position)
+                TriggerServerEvent('bbv-bombs:syncdata',v.position,nil,nil)
+            else
+                Wrapper:Notify("You failed the defusion.")
+                explosion = {
+                    position = v.position
+                }
+                TriggerServerEvent('bbv-bombs:explode',explosion)
+                TriggerServerEvent('bbv-bombs:syncdata',v.position,nil,nil)
             end
         end
     end

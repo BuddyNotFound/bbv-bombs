@@ -32,4 +32,10 @@ files {
 	'html/app.js'
 }
 
+files {
+    'stream/prop_explosive_c4.ytyp',
+}
+
+data_file 'DLC_ITYP_REQUEST' 'stream/prop_explosive_c4.ytyp'
+
 lua54 'yes'

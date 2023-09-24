@@ -66,45 +66,51 @@ function Wrapper:Target(id,label,pos,event,type) -- QBTarget target create
             options = {
                 {
                     type = "client",
-                    event = "np-miscscripts:bombs:checkTime",
-                    icon = "stopwatch",
+                    event = "bbv-bombs:bomb:checkTime",
+                    icon = "fas fa-stopwatch",
                     label = "Check remaining time",
                 },
                 {
                     type = "client",
-                    event = "np-miscscripts:bombs:cut",
-                    icon = "cut",
+                    event = "bbv-bombs:cut:red",
+                    icon = "fas fa-cut",
                     label = "Cut red wire",
                 },
                 {
                     type = "client",
-                    event = "np-miscscripts:bombs:cut",
-                    icon = "cut",
+                    event = "bbv-bombs:cut:green",
+                    icon = "fas fa-cut",
                     label = "Cut green wire",
                 },
                 {
                     type = "client",
-                    event = "np-miscscripts:bombs:cut",
-                    icon = "cut",
+                    event = "bbv-bombs:cut:blue",
+                    icon = "fas fa-cut",
                     label = "Cut blue wire",
                 },
                 {
                     type = "client",
-                    event = "np-miscscripts:bombs:cut",
-                    icon = "cut",
+                    event = "bbv-bombs:cut:yellow",
+                    icon = "fas fa-cut",
                     label = "Cut yellow wire",
                 },
                 {
                     type = "client",
-                    event = "np-miscscripts:bombs:cut",
-                    icon = "cut",
+                    event = "bbv-bombs:cut:purple",
+                    icon = "fas fa-cut",
                     label = "Cut purple wire",
                 },
                 {
                     type = "client",
-                    event = "np-miscscripts:bombs:cut",
-                    icon = "cut",
+                    event = "bbv-bombs:cut:white",
+                    icon = "fas fa-cut",
                     label = "Cut white wire",
+                },
+                {
+                    type = "client",
+                    event = "bbv-bombs:pin",
+                    icon = "fas fa-cut",
+                    label = "Disable (pin)",
                 },
             },
             distance = 1.5
@@ -159,6 +165,12 @@ function Wrapper:Target(id,label,pos,event,type) -- QBTarget target create
                 icon = "fas fa-cut",
                 label = "Cut white wire",
             },
+            {
+                id = "c4_pin",
+                event = "bbv-bombs:pin",
+                icon = "fas fa-cut",
+                label = "Disable (pin)",
+            },
         }
     })
     end
@@ -173,46 +185,52 @@ function Wrapper:Target(id,label,pos,event,type) -- QBTarget target create
                 options = {
                     {
                         type = "client",
-                        event = "np-miscscripts:bombs:checkTime",
-                        icon = "stopwatch",
+                        event = "bbv-bombs:bomb:checkTime",
+                        icon = "fas fa-stopwatch",
                         label = "Check remaining time",
                     },
                     {
                         type = "client",
-                        event = "np-miscscripts:bombs:cut",
-                        icon = "cut",
+                        event = "bbv-bombs:cut:red",
+                        icon = "fas fa-cut",
                         label = "Cut red wire",
                     },
                     {
                         type = "client",
-                        event = "np-miscscripts:bombs:cut",
-                        icon = "cut",
+                        event = "bbv-bombs:cut:green",
+                        icon = "fas fa-cut",
                         label = "Cut green wire",
                     },
                     {
                         type = "client",
-                        event = "np-miscscripts:bombs:cut",
-                        icon = "cut",
+                        event = "bbv-bombs:cut:blue",
+                        icon = "fas fa-cut",
                         label = "Cut blue wire",
                     },
                     {
                         type = "client",
-                        event = "np-miscscripts:bombs:cut",
-                        icon = "cut",
+                        event = "bbv-bombs:cut:yellow",
+                        icon = "fas fa-cut",
                         label = "Cut yellow wire",
                     },
                     {
                         type = "client",
-                        event = "np-miscscripts:bombs:cut",
-                        icon = "cut",
+                        event = "bbv-bombs:cut:purple",
+                        icon = "fas fa-cut",
                         label = "Cut purple wire",
                     },
                     {
                         type = "client",
-                        event = "np-miscscripts:bombs:cut",
-                        icon = "cut",
+                        event = "bbv-bombs:cut:white",
+                        icon = "fas fa-cut",
                         label = "Cut white wire",
                     },
+                    {
+                        type = "client",
+                        event = "bbv-bombs:pin",
+                        icon = "fas fa-cut",
+                        label = "Disable (pin)",
+                    }
                 },
                 distance = 1.5
             })

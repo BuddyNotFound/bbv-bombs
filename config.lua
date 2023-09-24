@@ -10,6 +10,6 @@ Config.Settings = {
 	Inventory = 'OX', -- QB/OX
 	Target = "OX", -- OX/QB
 	WebHook = "", -- Discord webhook 
-	Prop = "ch_prop_ch_explosive_01a",
+	Prop = "prop_explosive_c4_screen",
 	ItemName = "c4_bomb"
 }
