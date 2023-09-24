@@ -7,12 +7,9 @@ The player who plants the bomb can choose the wire that needs to be cut and the 
 
 All bomb data is synchronized between players and is deleted upon server restart..
 
-**Preview (planting) :**
-https://streamable.com/y9a6an
-**Preview (explosion) :** 
-https://streamable.com/566id6
-**Preview (2 players) :** 
-https://streamable.com/vqnn8d
+**Preview (planting) :** - https://streamable.com/y9a6an
+**Preview (explosion) :** - https://streamable.com/566id6
+**Preview (2 players) :** - https://streamable.com/vqnn8d
 
 **Logs :** 
 ![image](https://github.com/BuddyNotFound/bbv-bombs/assets/74051918/0ae9ea9c-031b-497c-b349-58c61e72a5e8)
