@@ -1,7 +1,7 @@
 ![bombs_main](https://github.com/BuddyNotFound/bbv-bombs/assets/74051918/9fc78202-6120-4ad5-8fe1-ebbf6b1bbfc2)
 
 
-**BBVxWORLD Bombs** allows you to plant and defuse bomb, works with QB/ESX and it requires [ox_lib](https://github.com/overextended/ox_lib)
+**BBVxWORLD Bombs** allows you to plant and defuse bombs, works with QB/ESX and it requires [ox_lib](https://github.com/overextended/ox_lib)
 It is also compatible with **OX/QB/BT** targets.
 
 The player who plants the bomb can choose the wire that needs to be cut and the difficulty of the minigame. Additionally, they can create a defuse pin that can be used by themselves or anyone who knows it to defuse the bomb.
