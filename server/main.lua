@@ -41,12 +41,12 @@ RegisterNetEvent('bbv-bombs:activate',function(data)
     end
 end)
 
-RegisterCommand('checksv',function()
-    for k,v in pairs(Bombs) do
-        --print('---------')
-        --print('Bomb #' .. k)
-        --print('Bomb pos = '..v.position)
-        --print('Bomb time = '..v.length)
-        --print('---------')
-    end
-end)
+-- RegisterCommand('checksv',function()
+--     for k,v in pairs(Bombs) do
+--         print('---------')
+--         print('Bomb #' .. k)
+--         print('Bomb pos = '..v.position)
+--         print('Bomb time = '..v.length)
+--         print('---------')
+--     end
+-- end)
