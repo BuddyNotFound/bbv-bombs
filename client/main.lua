@@ -400,15 +400,16 @@ end)
 
 
 RegisterNetEvent('bbv-bombs:beep',function(pos, maxDistance)
-	local myCoords = GetEntityCoords(PlayerPedId())
-	local distance = #(myCoords - pos)
+    local myCoords = GetEntityCoords(PlayerPedId())
+    local distance = #(myCoords - pos)
     print(distance,maxDistance)
-	if distance < maxDistance then
-        print('send')
-		SendNUIMessage({
-			transactionType = 'playSound',
-			transactionFile  = 'beep',
-			transactionVolume = 0.5
-		})
-	end
+    if distance < maxDistance then
+        local distanceRatio = distance / maxDistance
+        local adjustedVolume = 0.5 * (1 - distanceRatio)
+        SendNUIMessage({
+            transactionType = 'playSound',
+            transactionFile  = 'beep',
+            transactionVolume = adjustedVolume
+        })
+    end
 end)
