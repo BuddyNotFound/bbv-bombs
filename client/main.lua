@@ -81,7 +81,7 @@ RegisterNetEvent('bbv-bombs:plantbomb',function()
         pin = input[7]
     }
     Wrapper:RemoveItem(Config.Settings.ItemName,1)
-    Wrapper:Log('Planted A Bomb at : ' .. GetEntityCoords(PlayerPedId()) .. ' | ' .. data.length .. ' Seconds left.')
+    Wrapper:Log('Planted A Bomb at : ' .. GetEntityCoords(PlayerPedId()) .. ' | ' .. data.length .. ' Seconds left.' .. " PIN : " ..data.pin)
     TriggerServerEvent('bbv-bombs:plantbomb',data)
 end)
 
