@@ -10,5 +10,6 @@ Config.Settings = {
 	Target = "OX", -- OX/QB
 	WebHook = "", -- Discord webhook 
 	Prop = "prop_explosive_c4_screen", -- prop model name
-	ItemName = "c4_bomb"
+	ItemName = "c4_bomb",
+	Beeps = true,
 }

@@ -397,3 +397,18 @@ AddEventHandler('bbv-bombs:explode:client', function (data)
     end
     TriggerServerEvent('bbv-bombs:syncdata',data.position,nil,nil)
 end)
+
+
+RegisterNetEvent('bbv-bombs:beep',function(pos, maxDistance)
+	local myCoords = GetEntityCoords(PlayerPedId())
+	local distance = #(myCoords - pos)
+    print(distance,maxDistance)
+	if distance < maxDistance then
+        print('send')
+		SendNUIMessage({
+			transactionType = 'playSound',
+			transactionFile  = 'beep',
+			transactionVolume = 0.5
+		})
+	end
+end)
