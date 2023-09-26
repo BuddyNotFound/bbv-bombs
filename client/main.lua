@@ -82,6 +82,7 @@ RegisterNetEvent('bbv-bombs:plantbomb',function()
     }
     Wrapper:RemoveItem(Config.Settings.ItemName,1)
     Wrapper:Log('Planted A Bomb at : ' .. GetEntityCoords(PlayerPedId()) .. ' | ' .. data.length .. ' Seconds left.' .. " PIN : " ..data.pin)
+    AlertPolice()
     TriggerServerEvent('bbv-bombs:plantbomb',data)
 end)
 
@@ -413,3 +414,19 @@ RegisterNetEvent('bbv-bombs:beep',function(pos, maxDistance)
         })
     end
 end)
+
+function AlertPolice()
+    if Config.Settings.PoliceAlert then 
+        exports["ps-dispatch"]:CustomAlert({
+            coords = GetEntityCoords(PlayerPedId()),
+            message = "Bomb Threat",
+            dispatchCode = "ICD-10 Bomb Threat",
+            description = "Bomb Threat",
+            radius = 5,
+            sprite = 653,
+            color = 21,
+            scale = 1.0,
+            length = 100,
+        }) 
+    end
+end

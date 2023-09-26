@@ -11,5 +11,7 @@ Config.Settings = {
 	WebHook = "", -- Discord webhook 
 	Prop = "prop_explosive_c4_screen", -- prop model name
 	ItemName = "c4_bomb",
-	Beeps = true,
+	Beeps = true, -- if set to true the bomb will play beeping sound
+	PoliceAlert = true,
+	Dispatch = 'ps', -- ps-dispatch supported only. if you want to use custom set it to custom and edit function AlertPolice().
 }
