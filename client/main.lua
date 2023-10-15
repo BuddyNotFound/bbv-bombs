@@ -390,7 +390,10 @@ AddEventHandler('bbv-bombs:explode:client', function (data)
             0.0
         )
     end
-    --print(data.position .. ' the pos ')
+    local dist = #(vec3(data.position.x,data.position.y,data.position.z) - GetEntityCoords(PlayerPedId()))
+    if dist < 25 then 
+        SetEntityHealth(PlayerPedId(), 0)
+    end
     Wrapper:DeleteObject('bomb'..Bombs[data.position].position)
     Wrapper:TargetRemove('bomb'..Bombs[data.position].position)
     if Bombs[data.position] ~= nil then 
