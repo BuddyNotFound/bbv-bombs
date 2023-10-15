@@ -48,7 +48,6 @@ function Wrapper:LoadModel(model) -- Load Model
     RequestModel(modelHash)
     while not HasModelLoaded(modelHash) do
       Wait(0)
-      --print(modelHash)
     end
 end
 
@@ -264,14 +263,8 @@ function Wrapper:Notify(txt,tp,time) -- QBCore notify
     end
 end
 
-RegisterCommand('check2',function()
-    for k,v in pairs(Wrapper.object) do 
-        --print(v)
-    end
-end)
 
 function Wrapper:Drawtxt(x,y,txt)
-    --print(x,y,txt .. ' txt')
     SetTextFont(0)
     SetTextProportional(1)
     SetTextScale(0.0, 0.3)
