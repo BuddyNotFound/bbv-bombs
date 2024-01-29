@@ -17,15 +17,7 @@ RegisterNUICallback('ThermiteResult', function(data, cb)
     cb('ok')
 end)
 
-RegisterCommand('thermite', function(source, args)
-    exports["bbv-bombs"]:thermiteminigame(10, 3, 3, 10,
-    function() -- success
-        print("success")
-    end,
-    function() -- failure
-        print("failure")
-    end)
-end)
+
 
 exports('thermiteminigame', function(correctBlocks, incorrectBlocks, timetoShow, timetoLose, success, fail)
     resultReceived = false
