@@ -166,7 +166,7 @@ RegisterNetEvent('bbv-bombs:cut:green',function()
             local color = Bombs[v.position].wire
             ----print(color)
             if color == 'green' then 
-                exports["bbv-bombs"]:thermiteminigame(10, 3, 3, 10,
+                exports["bbv-bombs"]:thermiteminigame(v.correctBlocks , v.incorrectBlocks, v.timetoShow , v.timetoLose,
                 function()
                     Wrapper:Notify("You defused the bomb.")
 
@@ -202,7 +202,7 @@ RegisterNetEvent('bbv-bombs:cut:blue',function()
             local color = Bombs[v.position].wire
             ----print(color)
             if color == 'blue' then 
-                exports["bbv-bombs"]:thermiteminigame(10, 3, 3, 10,
+                exports["bbv-bombs"]:thermiteminigame(v.correctBlocks , v.incorrectBlocks, v.timetoShow , v.timetoLose,
                 function()
                     Wrapper:Notify("You defused the bomb.")
                     
@@ -237,7 +237,7 @@ RegisterNetEvent('bbv-bombs:cut:yellow',function()
             local color = Bombs[v.position].wire
             ----print(color)
             if color == 'yellow' then 
-                exports["bbv-bombs"]:thermiteminigame(10, 3, 3, 10,
+                exports["bbv-bombs"]:thermiteminigame(v.correctBlocks , v.incorrectBlocks, v.timetoShow , v.timetoLose,
                 function()
                     Wrapper:Notify("You defused the bomb.")
                     
@@ -272,7 +272,7 @@ RegisterNetEvent('bbv-bombs:cut:purple',function()
             local color = Bombs[v.position].wire
             ----print(color)
             if color == 'purple' then 
-                exports["bbv-bombs"]:thermiteminigame(10, 3, 3, 10,
+                exports["bbv-bombs"]:thermiteminigame(v.correctBlocks , v.incorrectBlocks, v.timetoShow , v.timetoLose,
                 function()
                     Wrapper:Notify("You defused the bomb.")
                     
@@ -307,7 +307,7 @@ RegisterNetEvent('bbv-bombs:cut:white',function()
             local color = Bombs[v.position].wire
             ----print(color)
             if color == 'white' then 
-                exports["bbv-bombs"]:thermiteminigame(10, 3, 3, 10,
+                exports["bbv-bombs"]:thermiteminigame(v.correctBlocks , v.incorrectBlocks, v.timetoShow , v.timetoLose,
                 function()
                     Wrapper:Notify("You defused the bomb.")
                     
