@@ -11,7 +11,6 @@ Wrapper = {
 
 function Wrapper:CreateObject(id,prop,coords,network,misson) -- Create object / prop
     Wrapper.object[id] = CreateObject(GetHashKey(prop), coords.x,coords.y,coords.z - 1, network or false,misson or false)
-    -- PlaceObjectOnGroundProperly(Wrapper.object[id])
     SetEntityHeading(Wrapper.object[id], coords.w)
     FreezeEntityPosition(Wrapper.object[id], true)
     SetEntityAsMissionEntity(Wrapper.object[id], true, true)

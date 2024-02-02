@@ -31,12 +31,10 @@ RegisterNetEvent('bbv-bombs:activate',function(data)
         Wait(1000)
         if Bombs[data.position] == nil then return end
         Bombs[data.position].length = i
-        -- -- ----print(Bombs[data.position].length .. ' ' .. Bombs[data.position].position)
         TriggerEvent('bbv-bombs:syncdata',data.position,data,Bombs[data.position].length)
         if Config.Settings.Beeps then 
             TriggerClientEvent('bbv-bombs:beep',-1,data.position,25)
         end
-        -- --print('bbv-bombs:syncdata',data.position,data,Bombs[data.position].length)
         if Bombs[data.position].length <= 1 then 
             TriggerClientEvent('bbv-bombs:explode:client',-1,data)
             TriggerEvent('bbv-bombs:syncdata',data.position,nil,nil)
