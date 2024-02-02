@@ -4,7 +4,6 @@ AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
     Wrapper.TriggerCallback('bbv-syncbombs', function(data)
         Bombs = data
         for k,v in pairs(Bombs) do
-            --print(json.encode(v) .. ' Bombs Data')
             TriggerEvent('bbv-bombs:plantbomb:sync',v)
         end
     end)
@@ -87,7 +86,6 @@ RegisterNetEvent('bbv-bombs:plantbomb',function()
 end)
 
 RegisterNetEvent('bbv-bombs:plantbomb:sync',function(data)
-    --print('Creating Bomb ' .. json.encode(data))
     TriggerServerEvent("bbv-bombs:activate",data)
     Bombs[data.position] = data
 
@@ -96,17 +94,9 @@ RegisterNetEvent('bbv-bombs:plantbomb:sync',function(data)
     Wrapper:Target('bomb'..Bombs[data.position].position,label,Bombs[data.position].position,event,type)
 end)
 
-RegisterCommand('check',function()
-    for k,v in pairs(Bombs) do
-        --print(Bombs[v.position].wire)
-        --print(json.encode(v) .. ' Bombs Data') 
-    end
-end)
-
 RegisterNetEvent('bbv-bombs:bomb:checkTime',function()
     mypos = GetEntityCoords(PlayerPedId())
     for k,v in pairs(Bombs) do
-        ----print(json.encode(v)) 
         local dist = #(mypos - v.position)
         if dist <= 3 then 
             Wrapper:Notify('Time remaining : ' .. Bombs[v.position].length .. " seconds")
@@ -128,7 +118,6 @@ RegisterNetEvent('bbv-bombs:cut:red',function()
         local dist = #(mypos - v.position)      
         if dist <= 3 then 
             local color = Bombs[v.position].wire
-            --print(color)
             if color == 'red' then 
                 exports["bbv-bombs"]:thermiteminigame(v.correctBlocks , v.incorrectBlocks, v.timetoShow , v.timetoLose,
                 function()
