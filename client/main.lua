@@ -160,11 +160,9 @@ end)
 RegisterNetEvent('bbv-bombs:cut:green',function()
     mypos = GetEntityCoords(PlayerPedId())
     for k,v in pairs(Bombs) do
-        ----print(mypos, v.position) 
         local dist = #(mypos - v.position)
         if dist <= 3 then 
             local color = Bombs[v.position].wire
-            ----print(color)
             if color == 'green' then 
                 exports["bbv-bombs"]:thermiteminigame(v.correctBlocks , v.incorrectBlocks, v.timetoShow , v.timetoLose,
                 function()
@@ -200,7 +198,6 @@ RegisterNetEvent('bbv-bombs:cut:blue',function()
         local dist = #(mypos - v.position)
         if dist <= 3 then 
             local color = Bombs[v.position].wire
-            ----print(color)
             if color == 'blue' then 
                 exports["bbv-bombs"]:thermiteminigame(v.correctBlocks , v.incorrectBlocks, v.timetoShow , v.timetoLose,
                 function()
@@ -235,7 +232,6 @@ RegisterNetEvent('bbv-bombs:cut:yellow',function()
         local dist = #(mypos - v.position)
         if dist <= 3 then 
             local color = Bombs[v.position].wire
-            ----print(color)
             if color == 'yellow' then 
                 exports["bbv-bombs"]:thermiteminigame(v.correctBlocks , v.incorrectBlocks, v.timetoShow , v.timetoLose,
                 function()
@@ -270,7 +266,6 @@ RegisterNetEvent('bbv-bombs:cut:purple',function()
         local dist = #(mypos - v.position)
         if dist <= 3 then 
             local color = Bombs[v.position].wire
-            ----print(color)
             if color == 'purple' then 
                 exports["bbv-bombs"]:thermiteminigame(v.correctBlocks , v.incorrectBlocks, v.timetoShow , v.timetoLose,
                 function()
@@ -305,7 +300,6 @@ RegisterNetEvent('bbv-bombs:cut:white',function()
         local dist = #(mypos - v.position)
         if dist <= 3 then 
             local color = Bombs[v.position].wire
-            ----print(color)
             if color == 'white' then 
                 exports["bbv-bombs"]:thermiteminigame(v.correctBlocks , v.incorrectBlocks, v.timetoShow , v.timetoLose,
                 function()
